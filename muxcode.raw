@@ -25,15 +25,9 @@
 			 <key>BBLMLanguageSuffix</key> <string>.mu</string>
 		</dict>
 	</array>
-	
-	<!-- Specify some keywords. This isn’t required, either,
-             but it provides something to color: -->
-	<key>BBLMKeywordList</key>
-	<array>
-	</array>
-	
+		
 	<key>BBLMSupportsTextCompletion</key>	<false/>
-	<key>BBLMReferenceSearchURLTemplate</key> <string>https://github.com/luxembourg/muxcode-clm/wiki/__SYMBOLNAME__</string>
+	<key>BBLMReferenceSearchURLTemplate</key> <string>http://github.com/luxembourg/muxcode-clm/wiki/__SYMBOLNAME__</string>
 	<key>BBLMScansFunctions</key> <true/>
 	<key>BBLMColorsSyntax</key> <true/>
 	<key>BBLMKeywordList</key>
