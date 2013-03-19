@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+	"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+
+<!--  The smallest CLM that will color keywords.
+      Copyright (c) 2012 Bare Bones Software, Inc. -->
+		
+<dict>
+	<!-- You must identify the plist as a CLM: -->
+	<key>BBEditDocumentType</key>
+	<string>CodelessLanguageModule</string>
+	
+	<!-- You must identify your language: -->
+	<key>BBLMLanguageDisplayName</key>  <string>MUXCode</string>
+	<key>BBLMLanguageCode</key>         <string>MUX</string>
+	
+	<!-- Not required, but there’s not much point to
+	     a language module if it doesn’t color syntax: -->
+	<key>BBLMColorsSyntax</key>         <true/>
+	
+	<key>BBLMSuffixMap</key>
+	<array>
+		<dict>
+			 <key>BBLMLanguageSuffix</key> <string>.mu</string>
+		</dict>
+	</array>
+	
+	<!-- Specify some keywords. This isn’t required, either,
+             but it provides something to color: -->
+	<key>BBLMKeywordList</key>
+	<array>
+	</array>
+	
+	<key>BBLMSupportsTextCompletion</key>	<false/>
+	<key>BBLMReferenceSearchURLTemplate</key> <string>https://github.com/luxembourg/muxcode-clm/wiki/__SYMBOLNAME__</string>
+	<key>BBLMScansFunctions</key> <true/>
+	<key>BBLMColorsSyntax</key> <true/>
+	<key>BBLMKeywordList</key>
+	<array>
+		<string>@emit</string>
+<string>@eval</string>
+<string>@nemit</string>
+<string>@quitprogram</string>
+<string>@unlink</string>
+<string>@unlock</string>
+<string>@wall</string>
+<string>@wipe</string>
+<string>think</string>
+<string>@alias</string>
+<string>@assert</string>
+<string>@break</string>
+<string>@create</string>
+<string>@dolist</string>
+<string>@femit</string>
+<string>@force</string>
+<string>@link</string>
+<string>@lock</string>
+<string>@log</string>
+<string>@mail</string>
+<string>@name</string>
+<string>@notify</string>
+<string>@npemit</string>
+<string>@oemit</string>
+<string>@parent</string>
+<string>@pcreate</string>
+<string>@pemit</string>
+<string>@program</string>
+<string>@query</string>
+<string>@quota</string>
+<string>@set</string>
+<string>@tel</string>
+<string>@teleport</string>
+<string>@wait</string>
+<string>@cpattr</string>
+<string>@dig</string>
+<string>@edit</string>
+<string>@if</string>
+<string>@mvattr</string>
+<string>@open</string>
+<string>@sw</string>
+<string>@swi</string>
+<string>@switch</string>
+<string>@tr</string>
+<string>@tri</string>
+<string>@trigger</string>
+<string>@verb</string>
+	</array>
+	<key>BBLMPredefinedNameList</key>
+	<array>
+		<string>ABS</string>
+<string>ACCENT</string>
+<string>ACOS</string>
+<string>ADD</string>
+<string>AFTER</string>
+<string>ALPHAMAX</string>
+<string>ALPHAMIN</string>
+<string>AND</string>
+<string>ANDBOOL</string>
+<string>ANDFLAGS</string>
+<string>ANSI</string>
+<string>APOSS</string>
+<string>ART</string>
+<string>ASIN</string>
+<string>ATAN</string>
+<string>ATAN2</string>
+<string>ATTRCNT</string>
+<string>BAND</string>
+<string>BASECONV</string>
+<string>BEEP</string>
+<string>BEFORE</string>
+<string>BITTYPE</string>
+<string>BNAND</string>
+<string>BOR</string>
+<string>BXOR</string>
+<string>CAND</string>
+<string>CANDBOOL</string>
+<string>CANSEE</string>
+<string>CAPSTR</string>
+<string>CASE</string>
+<string>CAT</string>
+<string>CEIL</string>
+<string>CEMIT</string>
+<string>CENTER</string>
+<string>CHANNELS</string>
+<string>CHANOBJ</string>
+<string>CHILDREN</string>
+<string>CHOOSE</string>
+<string>CHR</string>
+<string>CMDS</string>
+<string>COLORDEPTH</string>
+<string>COLUMNS</string>
+<string>COMALIAS</string>
+<string>COMP</string>
+<string>COMTITLE</string>
+<string>CON</string>
+<string>CONFIG</string>
+<string>CONN</string>
+<string>CONNLAST</string>
+<string>CONNLEFT</string>
+<string>CONNMAX</string>
+<string>CONNNUM</string>
+<string>CONNRECORD</string>
+<string>CONNTOTAL</string>
+<string>CONTROLS</string>
+<string>CONVSECS</string>
+<string>CONVTIME</string>
+<string>COR</string>
+<string>CORBOOL</string>
+<string>COS</string>
+<string>CPAD</string>
+<string>CRC32</string>
+<string>CREATE</string>
+<string>CTIME</string>
+<string>CTU</string>
+<string>CWHO</string>
+<string>DEC</string>
+<string>DECRYPT</string>
+<string>DEFAULT</string>
+<string>DELETE</string>
+<string>DESTROY</string>
+<string>DIE</string>
+<string>DIGEST</string>
+<string>DIGITTIME</string>
+<string>DIST2D</string>
+<string>DIST3D</string>
+<string>DISTRIBUTE</string>
+<string>DOING</string>
+<string>DUMPING</string>
+<string>E</string>
+<string>EDEFAULT</string>
+<string>EDIT</string>
+<string>ELEMENTS</string>
+<string>ELOCK</string>
+<string>EMIT</string>
+<string>ENCRYPT</string>
+<string>ENTRANCES</string>
+<string>EQ</string>
+<string>ERROR</string>
+<string>ESCAPE</string>
+<string>ETIMEFMT</string>
+<string>EVAL</string>
+<string>EXIT</string>
+<string>EXP</string>
+<string>EXPTIME</string>
+<string>EXTRACT</string>
+<string>FCOUNT</string>
+<string>FDEPTH</string>
+<string>FDIV</string>
+<string>FILTER</string>
+<string>FILTERBOOL</string>
+<string>FINDABLE</string>
+<string>FIRST</string>
+<string>FLAGS</string>
+<string>FLOOR</string>
+<string>FLOORDIV</string>
+<string>FMOD</string>
+<string>FOLD</string>
+<string>FOREACH</string>
+<string>FULLNAME</string>
+<string>GET</string>
+<string>GET_EVAL</string>
+<string>GRAB</string>
+<string>GRABALL</string>
+<string>GREP</string>
+<string>GREPI</string>
+<string>GT</string>
+<string>GTE</string>
+<string>HASATTR</string>
+<string>HASATTRP</string>
+<string>HASFLAG</string>
+<string>HASPOWER</string>
+<string>HASQUOTA</string>
+<string>HASTYPE</string>
+<string>HEIGHT</string>
+<string>HOME</string>
+<string>HOST</string>
+<string>IABS</string>
+<string>IADD</string>
+<string>IDIV</string>
+<string>IDLE</string>
+<string>IF</string>
+<string>IFELSE</string>
+<string>ILEV</string>
+<string>IMUL</string>
+<string>INC</string>
+<string>INDEX</string>
+<string>INSERT</string>
+<string>INUM</string>
+<string>INZONE</string>
+<string>ISDBREF</string>
+<string>ISIGN</string>
+<string>ISINT</string>
+<string>ISNUM</string>
+<string>ISRAT</string>
+<string>ISUB</string>
+<string>ISWORD</string>
+<string>ITEMIZE</string>
+<string>ITER</string>
+<string>ITEXT</string>
+<string>LADD</string>
+<string>LAND</string>
+<string>LAST</string>
+<string>LASTCREATE</string>
+<string>LATTR</string>
+<string>LATTRCMDS</string>
+<string>LATTRP</string>
+<string>LCMDS</string>
+<string>LCON</string>
+<string>LCSTR</string>
+<string>LDELETE</string>
+<string>LEXITS</string>
+<string>LFLAGS</string>
+<string>LINK</string>
+<string>LIST</string>
+<string>LIT</string>
+<string>LJUST</string>
+<string>LN</string>
+<string>LNUM</string>
+<string>LOC</string>
+<string>LOCALIZE</string>
+<string>LOCATE</string>
+<string>LOCK</string>
+<string>LOG</string>
+<string>LOR</string>
+<string>LPAD</string>
+<string>LPARENT</string>
+<string>LPORTS</string>
+<string>LPOS</string>
+<string>LRAND</string>
+<string>LROOMS</string>
+<string>LT</string>
+<string>LTE</string>
+<string>LWHO</string>
+<string>MAIL</string>
+<string>MAILFROM</string>
+<string>MAILSIZE</string>
+<string>MAILSUBJ</string>
+<string>MAP</string>
+<string>MATCH</string>
+<string>MATCHALL</string>
+<string>MAX</string>
+<string>MEMBER</string>
+<string>MERGE</string>
+<string>MID</string>
+<string>MIN</string>
+<string>MIX</string>
+<string>MOD</string>
+<string>MONEY</string>
+<string>MONIKER</string>
+<string>MOTD</string>
+<string>MTIME</string>
+<string>MUDNAME</string>
+<string>MUL</string>
+<string>MUNGE</string>
+<string>NAME</string>
+<string>NEARBY</string>
+<string>NEQ</string>
+<string>NEXT</string>
+<string>NOT</string>
+<string>NULL</string>
+<string>NUM</string>
+<string>OBJ</string>
+<string>OBJEVAL</string>
+<string>OBJMEM</string>
+<string>OEMIT</string>
+<string>OR</string>
+<string>ORBOOL</string>
+<string>ORD</string>
+<string>ORFLAGS</string>
+<string>OWNER</string>
+<string>PACK</string>
+<string>PARENT</string>
+<string>PEMIT</string>
+<string>PFIND</string>
+<string>PI</string>
+<string>PICKRAND</string>
+<string>PLAYMEM</string>
+<string>PMATCH</string>
+<string>POLL</string>
+<string>PORTS</string>
+<string>POS</string>
+<string>POSS</string>
+<string>POWER</string>
+<string>POWERS</string>
+<string>R</string>
+<string>RAND</string>
+<string>REGMATCH</string>
+<string>REGMATCHI</string>
+<string>REGRAB</string>
+<string>REGRABALL</string>
+<string>REGRABALLI</string>
+<string>REGRABI</string>
+<string>REMAINDER</string>
+<string>REMIT</string>
+<string>REMOVE</string>
+<string>REPEAT</string>
+<string>REPLACE</string>
+<string>REST</string>
+<string>RESTARTS</string>
+<string>RESTARTSECS</string>
+<string>RESTARTTIME</string>
+<string>REVERSE</string>
+<string>REVWORDS</string>
+<string>RIGHT</string>
+<string>RJUST</string>
+<string>RLOC</string>
+<string>ROMAN</string>
+<string>ROOM</string>
+<string>ROUND</string>
+<string>RPAD</string>
+<string>S</string>
+<string>SCRAMBLE</string>
+<string>SEARCH</string>
+<string>SECS</string>
+<string>SECURE</string>
+<string>SET</string>
+<string>SETDIFF</string>
+<string>SETINTER</string>
+<string>SETQ</string>
+<string>SETR</string>
+<string>SETUNION</string>
+<string>SHA1</string>
+<string>SHL</string>
+<string>SHR</string>
+<string>SHUFFLE</string>
+<string>SIGN</string>
+<string>SIN</string>
+<string>SINGLETIME</string>
+<string>SITEINFO</string>
+<string>SORT</string>
+<string>SORTBY</string>
+<string>SPACE</string>
+<string>SPELLNUM</string>
+<string>SPLICE</string>
+<string>SQRT</string>
+<string>SQUISH</string>
+<string>STARTSECS</string>
+<string>STARTTIME</string>
+<string>STATS</string>
+<string>STEP</string>
+<string>STRCAT</string>
+<string>STRIP</string>
+<string>STRIPACCENTS</string>
+<string>STRIPANSI</string>
+<string>STRLEN</string>
+<string>STRMATCH</string>
+<string>STRMEM</string>
+<string>STRTRUNC</string>
+<string>SUB</string>
+<string>SUBEVAL</string>
+<string>SUBJ</string>
+<string>SUCCESSES</string>
+<string>SWITCH</string>
+<string>T</string>
+<string>TABLE</string>
+<string>TAN</string>
+<string>TEL</string>
+<string>TERMINFO</string>
+<string>TEXTFILE</string>
+<string>TIME</string>
+<string>TIMEFMT</string>
+<string>TR</string>
+<string>TRANSLATE</string>
+<string>TRIGGER</string>
+<string>TRIM</string>
+<string>TRUNC</string>
+<string>TYPE</string>
+<string>U</string>
+<string>UCSTR</string>
+<string>UDEFAULT</string>
+<string>ULOCAL</string>
+<string>UNPACK</string>
+<string>V</string>
+<string>VADD</string>
+<string>VALID</string>
+<string>VCROSS</string>
+<string>VDIM</string>
+<string>VDOT</string>
+<string>VERSION</string>
+<string>VISIBLE</string>
+<string>VMAG</string>
+<string>VMUL</string>
+<string>VSUB</string>
+<string>VUNIT</string>
+<string>WHERE</string>
+<string>WIDTH</string>
+<string>WIPE</string>
+<string>WORDPOS</string>
+<string>WORDS</string>
+<string>WRAP</string>
+<string>WRITETIME</string>
+<string>XGET</string>
+<string>XOR</string>
+<string>ZFUN</string>
+<string>ZONE</string>
+<string>ZWHO</string>
+	</array>
+		
+	<!-- You must specify the character set for
+             keywords and identifiers. Substitute your own:  -->
+	<key>Language Features</key>
+	<dict>
+		<key>Identifier and Keyword Character Class</key>
+		<string>A-Za-z0-9_\?!\./#@\$\^&amp;\-=\+</string>
+
+		<key>Comment Pattern</key>
+		<string><![CDATA[
+		(?x:
+			(^\s*#.*$)				|	(?# Mushcode Unformatter comment)
+			(^\s*@@ .*?(;|\z))		| 	(?# @@ command comment ends at line or semicolon)
+			(@@\(.*?\))					(?# @@ function comment)
+		)]]></string>
+		
+		<key>Function Pattern</key>
+		<string><![CDATA[
+		(?x:
+			(?P<leadspace>^\s*)
+			(?P<function>
+				&(?P<function_name>[A-Za-z0-9_/.\-])(?s:\s*) \w+=(?s:.+?)
+				\r^\s*(-|;)\s*$
+			)	
+		)]]></string>
+	</dict> 
+</dict>
+</plist>
