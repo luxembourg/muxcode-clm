@@ -49,19 +49,37 @@
 		<key>Comment Pattern</key>
 		<string><![CDATA[
 		(?x:
-			(^\s*#.*$)				|	(?# Mushcode Unformatter comment)
-			(^\s*@@ .*?(;|\z))		| 	(?# @@ command comment ends at line or semicolon)
-			(@@\(.*?\))					(?# @@ function comment)
+			(^\#.*$)					|	(?# Mushcode Unformatter comment)
+			(\[?@@\(.*?\)\]?)			|	(?# @@ function comment)
+			(@@.*;)						|	(?# @@ command comment, until semicolon)
+			(@@(?:(?!;).)*$)			 	(?# @@ command comment ends at line or semicolon)
 		)]]></string>
 		
 		<key>Function Pattern</key>
 		<string><![CDATA[
 		(?x:
-			(?P<leadspace>^\s*)
 			(?P<function>
-				&(?P<function_name>[A-Za-z0-9_/.\-])(?s:\s*) \w+=(?s:.+?)
-				\r^\s*(-|;)\s*$
-			)	
+				-?&(?P<function_name>.+?)\s+(.+)=(?s:.+?)
+				^\s*(-|;)\s*$
+			)
+		)]]></string>
+		
+		<key>String Pattern</key>
+		<string><![CDATA[
+		(?x:
+			(%[0-9\#@\!\|l])						|
+			(%q[A-Za-z0-9])							|
+			(%v[A-Za-z])							|
+			(%i[0-9])								|
+			(%=<[A-Za-z0-9\._/\^~`]+>)				|
+			(%_[A-Za-z0-9])						 	|
+			(\#-[1-9] ?[\w\s]*)					 	|
+			(\#[0-9]+)							 	|
+			(?<=u\()((.+/)?[A-Za-z0-9\._/\^~`]+) 	|
+			(?<=(?:map|mix)\()((.+/)?[A-Za-z0-9\._/\^~`]+) |
+			(?<=(?:step|fold)\()((.+/)?[A-Za-z0-9\._/\^~`]+) |
+			(?<=(?:filter|ulocal)\()((.+/)?[A-Za-z0-9\._/\^~`]+) |
+			(?<=udefault\()((.+/)?[A-Za-z0-9\._/\^~`]+)
 		)]]></string>
 	</dict> 
 </dict>
