@@ -471,9 +471,12 @@
 			)
 		)]]></string>
 						
+		<!-- TextWranglers should edit the first two patterns to remove "?# " -->
 		<key>String Pattern</key>
 		<string><![CDATA[
 		(?x:
+		    (?# %[iqv][0-9])						|
+			(?# %[qv][A-Za-z])						|
 			(%[rtbn])								|
 			(%[XxCc][A-Za-z])						|
 			(\#[\#$])								|
