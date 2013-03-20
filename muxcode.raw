@@ -12,8 +12,8 @@
 	<string>CodelessLanguageModule</string>
 	
 	<!-- You must identify your language: -->
-	<key>BBLMLanguageDisplayName</key>  <string>MUXCode</string>
-	<key>BBLMLanguageCode</key>         <string>MUX</string>
+	<key>BBLMLanguageDisplayName</key>  <string>MuxCode</string>
+	<key>BBLMLanguageCode</key>         <string>MUXU</string>
 	
 	<!-- Not required, but there’s not much point to
 	     a language module if it doesn’t color syntax: -->
@@ -32,6 +32,16 @@
 	<key>BBLMColorsSyntax</key> <true/>
 	<key>BBLMKeywordList</key>
 	<array>
+		<string>%0</string>
+		<string>%1</string>
+		<string>%2</string>
+		<string>%3</string>
+		<string>%4</string>
+		<string>%5</string>
+		<string>%6</string>
+		<string>%7</string>
+		<string>%8</string>
+		<string>%9</string>
 		@KEYWORDS@
 	</array>
 	<key>BBLMPredefinedNameList</key>
@@ -44,7 +54,7 @@
 	<key>Language Features</key>
 	<dict>
 		<key>Identifier and Keyword Character Class</key>
-		<string>A-Za-z0-9_\?!\./#@\$\^&amp;\-=\+</string>
+		<string>A-Za-z0-9_\./#@\-=\+%</string>
 
 		<key>Comment Pattern</key>
 		<string><![CDATA[
@@ -70,18 +80,15 @@
 											 2: a @@ in the first column of a line
 											 3: a - in the first column of a line
 									     )
-				
 			)
 		)]]></string>
 						
 		<key>String Pattern</key>
 		<string><![CDATA[
 		(?x:
-			(%[0-9\#@\!\|l])						|
+			(%[rtbn])								|
+			(%[XxCc][A-Za-z])						|
 			(\#[\#$])								|
-			(%q[A-Za-z0-9])							|
-			(%v[A-Za-z])							|
-			(%i[0-9])								|
 			(%=<[A-Za-z0-9\._/\^~`]+>)				|
 			(%_[A-Za-z0-9])						 	|
 			(\#-[1-9] ?[\w\s]*)					 	|

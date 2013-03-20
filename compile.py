@@ -1,5 +1,5 @@
-INPUT="muxcode.raw"
-OUTPUT="muxcode.plist"
+INPUT="MuxCode.raw"
+OUTPUT="MuxCode.bbpackage/Contents/Language Modules/MuxCode.plist"
 KEYWORDS="keywords.txt"
 FUNCTIONS="functions.txt"
 

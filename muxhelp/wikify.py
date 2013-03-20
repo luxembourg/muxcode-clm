@@ -1,4 +1,5 @@
 import os
+from xml.sax.saxutils import escape
 
 PATH = "../../muxcode-clm.wiki"
 INPUT = "help.txt"
@@ -12,10 +13,10 @@ current_sequence = 0
 current_file = None
 
 for line in help_file:
-    line = line.strip().lower()
+    line = line.strip()
     
     if line.startswith("&"):
-        symbol = line[2:]
+        symbol = line[2:].lower()
         if symbol.endswith("()"):
             symbol = symbol[:-2]
 
@@ -30,6 +31,17 @@ for line in help_file:
             current_file = open(os.path.join(PATH, symbol + ".md"), "w")
             current_page = symbol
     else:
-        current_file.write(line)
+        if line.startswith("Related Topics:"):
+            links = []
+            for item in line[15:].split(","):
+                if item.endswith("."):
+                    item = item[:-1]
+                if item.endswith("()"):
+                    item = item[:-2]
+
+                links.append("[[%s]]" % (item.strip(),))
+            line = "Related Topics: " + ", ".join(links)
+
+        current_file.write(escape(line))
         current_file.write("\n")
 
