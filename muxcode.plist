@@ -443,13 +443,22 @@
 			(@@.*;)					|	(?# @@ command comment, until semicolon)
 			(@@(?:(?!;).)*$)	 		(?# @@ command comment ends at line or semicolon)
 		)]]></string>
-		
+
 		<key>Function Pattern</key>
 		<string><![CDATA[
 		(?x:
+			^-?&						(?# marks the beginning of a function)
 			(?P<function>
-				^-?&(?P<function_name>[\w_.-/]+?)\s+(.+)=(?s:.+?)
-				^\s*(-|;)\s*$
+				(?P<function_name>\S+)  (?# the name is all non-whitespace)
+				\s+						(?# followed by whitespace)
+				\S+\s*=					(?# then the object to set the function on )
+				(?s:.+?)				(?# the body is everything after the = )				
+				(^[\-;]\s*$|(?=^@@|-))	(?# The function is ended by either:
+											 1: a - or ; on a line by itself
+											 2: a @@ in the first column of a line
+											 3: a - in the first column of a line
+									     )
+				
 			)
 		)]]></string>
 						
